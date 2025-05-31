@@ -1,75 +1,82 @@
-# GDP XY Plotter
+GDP Data Visualization Suite
+Welcome to the GDP Data Visualization Suite — a trio of Python projects designed to bring global GDP data to life through interactive line plots and colorful world maps! Whether you want to track economic growth over time or see how GDP is distributed across countries visually, this suite has got you covered.
 
-This project is part of **Data Visualization - Module 2 Project 1** by **Rice University** (Coursera).
-It uses **Python** and **Pygal** to read GDP data from a CSV file and generate XY line plots for selected countries over a range of years.
+🚀 Project 1: Create Line Plot Using GDP
+What it does:
+Watch GDP trends unfold across years for any country with smooth, elegant line plots.
 
-## 📌 Project Description
+Key Functions:
 
-The goal of this project is to:
+read_csv_as_nested_dict(filename, keyfield, separator, quote):
+Reads CSV GDP data into a nested dictionary for easy lookup.
 
-* Read GDP data for various countries from a CSV file.
-* Allow selection of specific countries.
-* Extract and format GDP data for valid years.
-* Visualize GDP trends using an XY line chart created with Pygal.
-* Output the plot as an SVG file.
+build_plot_values(gdpinfo, country, years):
+Extracts GDP values for a given country over a range of years.
 
-## 📊 Features
+draw_line_plot(gdpinfo, countries):
+Generates a comparative line plot showing GDP growth for multiple countries.
 
-* Load and parse CSV GDP data with proper quoting and separators.
-* Support for user-defined minimum and maximum year ranges.
-* Clean error handling for invalid data points.
-* Generates high-quality SVG plots using Pygal.
-* Handles missing countries gracefully by displaying empty plots.
+Why you’ll love it:
+See the story of economic progress unfold visually — from booming giants to emerging economies — all on one chart.
 
-## 🛠️ Technologies Used
+🗺️ Project 2: Plot GDP on World Map by Country Name
+What it does:
+Paint the world map in shades of wealth, matching countries by their names.
 
-* **Python 3**
-* **CSV module** – for reading structured data
-* **Pygal** – for rendering SVG-based interactive plots
+Key Functions:
 
-## 📁 File Structure
+reconcile_countries_by_name(codeinfo, plot_countries):
+Matches country names in GDP data with plotting library’s country names, handling tricky mismatches.
 
-```
-gdp_plot.py         # Main Python script
-isp_gdp.csv         # Sample input CSV file (not included here)
-README.md           # Project documentation
-```
+build_map_dict_by_name(gdpinfo, codeinfo, plot_countries, year):
+Creates a dictionary mapping country codes to their GDP values for a specific year, based on name reconciliation.
 
-## 🧪 How to Run
+render_world_map(gdpinfo, codeinfo, year, map_style):
+Draws the world map with GDP data colored on a logarithmic scale for clarity.
 
-1. Install `pygal` if not already installed:
+Why you’ll love it:
+Visualize global wealth disparities with a simple glance — countries bloom in colors representing their GDP.
 
-   ```bash
-   pip install pygal
-   ```
+🗺️ Project 3: Plot GDP on World Map by Country Code
+What it does:
+Show GDP on the world map by matching countries via their official country codes — precise and efficient.
 
-2. Place your GDP CSV file in the same directory (e.g., `isp_gdp.csv`).
+Key Functions:
 
-3. Make sure to edit the `gdpinfo` dictionary in the script to match your CSV structure if necessary.
+reconcile_countries_by_code(codeinfo, plot_countries):
+Matches country codes from GDP data with those used in the plotting library.
 
-4. Run the script and generate the plots:
+build_map_dict_by_code(gdpinfo, codeinfo, plot_countries, year):
+Builds a GDP dictionary keyed by country codes for fast and accurate mapping.
 
-   ```python
-   # Uncomment the test call to run:
-   test_render_xy_plot()
-   ```
+render_world_map(gdpinfo, codeinfo, year, map_style):
+Displays the GDP data on the map using color scales, with unmatched countries flagged.
 
-5. SVG files will be created such as:
+Why you’ll love it:
+Accuracy meets beauty — explore a perfectly mapped world of economic data without name confusion.
 
-   * `isp_gdp_xy_none.svg`
-   * `isp_gdp_xy_china.svg`
-   * `isp_gdp_xy_uk+usa.svg`
+🔧 Common Tools & Setup
+Data files:
 
-## 📌 Sample Plot
+world_bank_gdp.csv — GDP data by country and year
 
-> ![Sample Output](sample_plot.svg)
-> *(Replace with actual image link if hosted)*
+isp_country_codes.csv — Country name and code mappings
 
-## 🗏️ Credits
+Libraries used:
+csv, pygal, math, matplotlib
 
-* Project developed as part of the **"Data Visualization" specialization by Rice University** on Coursera.
-* Developed using concepts taught in Module 2: *Working with CSV and plotting GDP trends*.
+How to run:
 
----
+Load your GDP and country code files.
 
-Feel free to contribute or raise issues if you're extending the project!
+Call functions from your chosen project to parse and visualize data.
+
+Enjoy beautiful, insightful graphs and maps!
+
+🌟 Get Started!
+Explore the power of data visualization and economic storytelling by running any of these projects. Dive deep into global GDP trends with just a few lines of Python.
+
+Questions? Feature requests? Reach out anytime!
+
+Author:rohini kasarapu
+Contact: rohinikasarapu2110@gmail.com
