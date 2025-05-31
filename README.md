@@ -1,4 +1,5 @@
 GDP Data Visualization Suite:
+
 Welcome to the GDP Data Visualization Suite — a trio of Python projects designed to bring global GDP data to life through interactive line plots and colorful world maps! Whether you want to track economic growth over time or see how GDP is distributed across countries visually, this suite has got you covered.
 
 🚀 Project 1: Create Line Plot Using GDP
